@@ -40,10 +40,6 @@ You should use the following process as much as possible:
 
 Since this is the **last** Ruby-only project we are doing, and a level 3, the requirements are larger than previous projects. **It is possible you will not be able to complete all requirements**, but if you use the process above, you will still be able to share with your instructors the process and the design you have created.
 
-### Optional Requirements
-- The first optional should always be looking for improvements within the existing code you have already written. Are there any additional edge cases you might be missing in your tests? Any opportunity to use an enumerable method where you're using an each?
-- Enhance your functionality to create a CSV database to load your initial data set. Hint: Use `Faker`.
-
 
 ## Wave One
 **Initial System Configuration and Setup**
