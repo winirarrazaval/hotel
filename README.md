@@ -44,12 +44,13 @@ Since this is the **last** Ruby-only project we are doing, and a level 3, the re
 ## Wave One: Initial System Configuration and Setup
 
 ### User Stories
-- As an administrator, I should be able to view a list of all of the rooms in the hotel
+- As an administrator, I should be able to access the list of all of the rooms in the hotel
 - As an administrator, I should be able to reserve any room for a given date range
-- As an administrator, I should be able to view a list of reservations for a specific date
+- As an administrator, I should be able to access the list of reservations for a specific date
+- As an administrator, I should be able to get the total cost for a given reservation
 
 ### Assumptions
-- There are 20 rooms to start with, and their are numbered 1 through 20
+- There are 20 rooms to start with, and they are numbered 1 through 20
 - There is only a single room rate of $200/night to start with
 - Any room can be reserved at any time (do not worry about whether or not it is available - that's in wave 2!)
 
@@ -59,7 +60,7 @@ Since this is the **last** Ruby-only project we are doing, and a level 3, the re
 ## Wave Two: Availability
 
 ### User Stories
-- As an administrator, I should be able to view a list of rooms that are not reserved on a given date range
+- As an administrator, I should be able to access the list of rooms that are not reserved for a given date range
 - As an administrator, I should be able to reserve an available room for a given date range
 
 ### Assumptions
@@ -88,7 +89,7 @@ Since this is the **last** Ruby-only project we are doing, and a level 3, the re
 
 ### User Stories
 - As an administrator, I should be able to set different rates for different rooms
-- As an administrator, I should be able to create an invoice for a given room reservation
+
 - create a block based on only available rooms
 
 ### Assumptions
