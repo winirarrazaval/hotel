@@ -59,7 +59,7 @@ Since this is the **last** Ruby-only project we are doing, and a level 3, the re
 ## Wave Two: Availability
 
 ### User Stories
-- As an administrator, I should be able to view the availability of rooms for a given date range
+- As an administrator, I should be able to view a list of rooms that are not reserved on a given date range
 - As an administrator, I should be able to reserve an available room for a given date range
 
 ### Assumptions
@@ -77,8 +77,8 @@ Since this is the **last** Ruby-only project we are doing, and a level 3, the re
 - As an administrator, I should be able to reserve an available room from within a block of rooms
 
 ### Assumptions
-Assume that a block can be created for a maximum of 5 rooms.
-Assume that when a room is reserved from a block of rooms, it will **always** match the date range of the block.
+- Assume that a block can be created for a maximum of 5 rooms
+- Assume that when a room is reserved from a block of rooms, it will **always** match the date range of the block
 
 ### Error Handling Recommendations
 
