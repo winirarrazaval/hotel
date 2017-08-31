@@ -71,13 +71,11 @@ Since this is the **last** Ruby-only project we are doing, and a level 3, the re
 
 ## Wave Three: Blocks of Rooms
 
-If you are not familiar with ....
+If you are not familiar with what a block of hotel rooms, here is a brief description:
 
-> A Block Booking refers to a group of rooms reserved for a specific customer -- usually for a set period of time.
+> A Block Booking refers to a group of rooms set aside for a specific customer -- usually for a set period of time.
 >
-> Room blocks are commonly reserved for conventions and meetings or groups in general. A room block is usually under a firm agreement and is for a set period of time. Rooms blocked are not available for sales to other costumers. Hotel revenue managers or reservation managers can also block rooms in case of temporary unavailability: for example rooms under refurbishment.
-
-From https://www.xotels.com/en/glossary/block
+> Room blocks are commonly reserved for conventions and meetings or groups in general. A room block is usually under a firm agreement and is for a set period of time. Rooms blocked are not available for sales to other customers.
 
 ### User Stories
 - As an administrator, I should be able to create a new block of rooms
@@ -97,3 +95,7 @@ From https://www.xotels.com/en/glossary/block
 ## Optional Requirements
 ### User Stories
 - As an administrator, I should be able to set different rates for different rooms
+
+### Technical
+- Read/write CSV files for each piece of data that your system is storing
+- Create a CLI to interact with your hotel system
