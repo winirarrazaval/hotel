@@ -41,8 +41,7 @@ You should use the following process as much as possible:
 Since this is the **last** Ruby-only project we are doing, and a level 3, the requirements are larger than previous projects. **It is possible you will not be able to complete all requirements**, but if you use the process above, you will still be able to share with your instructors the process and the design you have created.
 
 
-## Wave One
-**Initial System Configuration and Setup**
+## Wave One: Initial System Configuration and Setup
 
 ### User Stories
 - As an administrator, I should be able to view a list of all of the rooms in the hotel
@@ -57,8 +56,7 @@ Since this is the **last** Ruby-only project we are doing, and a level 3, the re
 ### Error Handling Recommendations
 - Your code shall raise an error when an invalid date range is provided
 
-## Wave Two
-**Availability**
+## Wave Two: Availability
 
 ### User Stories
 - As an administrator, I should be able to view the availability of rooms for a given date range
@@ -70,8 +68,7 @@ Since this is the **last** Ruby-only project we are doing, and a level 3, the re
 ### Error Handling Recommendations
 - Your code shall raise an exception when asked to reserve a room that is not available
 
-## Wave Three
-**Blocks of Rooms**
+## Wave Three: Blocks of Rooms
 
 ### User Stories
 - As an administrator, I should be able to create a new Block of Rooms
