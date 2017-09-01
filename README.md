@@ -44,13 +44,14 @@ Since this is the **last** Ruby-only project we are doing, and a level 3, the re
 ## Wave One: Initial System Configuration and Setup
 
 ### User Stories
-- As an administrator, I should be able to view a list of all of the rooms in the hotel
+- As an administrator, I should be able to access the list of all of the rooms in the hotel
 - As an administrator, I should be able to reserve any room for a given date range
-- As an administrator, I should be able to view a list of reservations for a specific date
+- As an administrator, I should be able to access the list of reservations for a specific date
+- As an administrator, I should be able to get the total cost for a given reservation
 
 ### Assumptions
-- There are 20 rooms to start with, and their are numbered 1 through 20
-- There is only a single room rate of $200/night to start with
+- There are 20 rooms to start with, and they are numbered 1 through 20
+- There is a single room rate of $200/night to start with
 - Any room can be reserved at any time (do not worry about whether or not it is available - that's in wave 2!)
 
 ### Error Handling Recommendations
@@ -59,7 +60,7 @@ Since this is the **last** Ruby-only project we are doing, and a level 3, the re
 ## Wave Two: Availability
 
 ### User Stories
-- As an administrator, I should be able to view a list of rooms that are not reserved on a given date range
+- As an administrator, I should be able to access the list of rooms that are not reserved for a given date range
 - As an administrator, I should be able to reserve an available room for a given date range
 
 ### Assumptions
@@ -70,27 +71,31 @@ Since this is the **last** Ruby-only project we are doing, and a level 3, the re
 
 ## Wave Three: Blocks of Rooms
 
+If you are not familiar with what a block of hotel rooms, here is a brief description:
+
+> A Block Booking refers to a group of rooms set aside for a specific customer -- usually for a set period of time.
+>
+> Room blocks are commonly reserved for conventions and meetings or groups in general. A room block is usually under a firm agreement and is for a set period of time. Rooms blocked are not available for sales to other customers.
+
 ### User Stories
-- As an administrator, I should be able to create a new Block of Rooms
-  - For a date range, collection of rooms and a discounted rate
-- As an administrator, I should be able to able to view the availability for a room within a block of rooms
-- As an administrator, I should be able to reserve an available room from within a block of rooms
+- As an administrator, I should be able to create a new block of rooms
+  - To create a block you need a date range, collection of rooms and a discounted room rate
+  - The collection of rooms should only include rooms that are available for the given date range
+- As an administrator, I should be able to check whether a given block has any rooms available
+- As an administrator, I should be able to reserve a room from within a block of rooms
 
 ### Assumptions
 - Assume that a block can be created for a maximum of 5 rooms
 - Assume that when a room is reserved from a block of rooms, it will **always** match the date range of the block
+- All of the logic from Wave 2 should still work, i.e. individual reservations
 
 ### Error Handling Recommendations
-
+- If a room is reserved in a block, it is not available for reservation by the general public
 
 ## Optional Requirements
-
-
 ### User Stories
 - As an administrator, I should be able to set different rates for different rooms
-- As an administrator, I should be able to create an invoice for a given room reservation
-- create a block based on only available rooms
 
-### Assumptions
-
-### Error Handling Recommendations
+### Technical
+- Read/write CSV files for each piece of data that your system is storing
+- Create a CLI to interact with your hotel system
