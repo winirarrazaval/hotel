@@ -64,10 +64,10 @@ Remember that your job is only to build the classes that store information and h
 
 ### User Stories
 
-- As an administrator, I should be able to access the list of all of the rooms in the hotel
-- As an administrator, I should be able to reserve a room for a given date range
-- As an administrator, I should be able to access the list of reservations for a specific date
-- As an administrator, I should be able to get the total cost for a given reservation
+- As an administrator, I can access the list of all of the rooms in the hotel
+- As an administrator, I can reserve a room for a given date range
+- As an administrator, I can access the list of reservations for a specific date
+- As an administrator, I can get the total cost for a given reservation
 
 ### Constraints
 
@@ -88,8 +88,8 @@ Remember that your job is only to build the classes that store information and h
 
 ### User Stories
 
-- As an administrator, I should be able to view a list of rooms that are not reserved for a given date range
-- As an administrator, I should be able to reserve an available room for a given date range
+- As an administrator, I can view a list of rooms that are not reserved for a given date range
+- As an administrator, I can reserve an available room for a given date range
 
 ### Constraints
 
@@ -109,12 +109,12 @@ If you are not familiar with what a block of hotel rooms, here is a brief descri
 
 ### User Stories
 
-- As an administrator, I should be able to create a block of rooms
+- As an administrator, I can create a block of rooms
     - To create a block you need a date range, collection of rooms and a discounted room rate
     - The collection of rooms should only include rooms that are available for the given date range
     - If a room is set aside in a block, it is not available for reservation by the general public, nor can it be included in another block
-- As an administrator, I should be able to check whether a given block has any rooms available
-- As an administrator, I should be able to reserve a room from within a block of rooms
+- As an administrator, I can check whether a given block has any rooms available
+- As an administrator, I can reserve a room from within a block of rooms
 
 ### Constraints
 
@@ -126,7 +126,7 @@ If you are not familiar with what a block of hotel rooms, here is a brief descri
 
 ### User Stories
 
-- As an administrator, I should be able to set different rates for different rooms
+- As an administrator, I can set different rates for different rooms
 
 ### Technical
 
