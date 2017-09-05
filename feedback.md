@@ -1,26 +1,28 @@
 # Ride Share
 ## What We're Looking For
 
-| Feature | Feedback    |
-| :------------- | :------------- |
-|  **Baseline** |   |
-|   Used Git Regularly	|   	|
-|   Answer comprehension questions	|   	|
-|  **Driver** |   |
-|   Uses the `all` method in the `find` method | |
-|   Has appropriate edge-case tests for each method in the class |    |
-|   Created a method that uses a method from the `Trip` object to retrieve the list of trips |  |
-|   Created a method that uses the internal trips list to calculate the average rating | |
-|  **Passenger** |   |
-|   Uses the `all` method in the `find` method | |
-|   Has appropriate edge-case tests for each method in the class |    |
-|   Created a method that uses a method from the `Trip` object to retrieve the list of trips |  |
-|   Created a method that uses the internal trips method to retrieve the associated drivers | |
-|  **Trip** |   |
-|   Reads the CSV file in the `all` method | |
-|   Has appropriate edge-case tests for each method in the class |    |
-|   Created a method that uses a method from the `Driver` to retrieve the associated driver instance  |    |
-|   Created a method that uses a method from the `Passenger` to retrieve the associated passenger instance |    |
-|   Created a method to retrieve all trips by driver id |     |
-|   Created a method to retrieve all trips by passenger id |      |
-|   **Overall**	|   	|
+Feature | Feedback
+---     | ---
+**Baseline** |
+Used git regularly	|
+Answer comprehension questions	|
+**Design** |
+Each class is responsible for a single piece of the program |
+Classes are loosely coupled |
+**Wave 1** |
+List rooms |
+Reserve a room for a given date range |
+List reservations for a given date |
+Calculate reservation price |
+Invalid date range produces an error |
+Test coverage |
+**Wave 2** |
+View available rooms for a given date range |
+Reserving a room that is not available produces an error |
+Test coverage |
+**Wave 3** |
+Create a block of rooms |
+Check if a block has rooms |
+Reserve a room from a block |
+Test coverage |
+**Additional Feedback** |
