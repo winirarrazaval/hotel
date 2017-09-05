@@ -8,7 +8,7 @@ Reinforce and practice all of the Ruby and programming concepts we've covered in
 - Create class and instance methods within our classes
 - Write pseudocode and create tests to drive the creation of our code
 
-This is a [level 3](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/rule-of-three.md), individual project.
+This is a [stage 3](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/rule-of-three.md), individual project.
 
 ## Introduction
 
@@ -78,7 +78,7 @@ Remember that your job is only to build the classes that store information and h
 
 ### Error Handling
 
-- Your code shall raise an error when an invalid date range is provided
+- Your code should raise an error when an invalid date range is provided
 
 ### Hints
 
@@ -97,7 +97,7 @@ Remember that your job is only to build the classes that store information and h
 
 ### Error Handling
 
-- Your code shall raise an exception when asked to reserve a room that is not available
+- Your code should raise an exception when asked to reserve a room that is not available
 
 ## Wave Three: Blocks of Rooms
 
@@ -124,11 +124,8 @@ If you are not familiar with what a block of hotel rooms, here is a brief descri
 
 ## Optional Enhancements
 
-### User Stories
+You should not be working on these (or even thinking about them) until you have fully completed wave 3.
 
-- As an administrator, I can set different rates for different rooms
-
-### Technical
-
+- Allow a user to set different rates for different rooms
 - Read/write CSV files for each piece of data that your system is storing
 - Create a CLI to interact with your hotel system
