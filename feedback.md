@@ -1,4 +1,4 @@
-# Ride Share
+# Hotel
 ## What We're Looking For
 
 Feature | Feedback
