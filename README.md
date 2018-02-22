@@ -80,7 +80,7 @@ Remember that your job is only to build the classes that store information and h
 
 ### Error Handling
 
-- Your code should raise an error when an invalid date range is provided
+- Your code should raise an error (StandardError) when an invalid date range is provided
 
 ### Hints
 
