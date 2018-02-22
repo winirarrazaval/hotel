@@ -10,6 +10,8 @@ Reinforce and practice all of the Ruby and programming concepts we've covered in
 
 This is a [stage 3](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/rule-of-three.md), individual project.
 
+This project is due EOD Friday March 2nd.
+
 ## Introduction
 
 Your company has been contracted to build a booking system for a small hotel. This system will be used by employees working at the front desk, and will not be available to the general public.
@@ -129,3 +131,6 @@ You should not be working on these (or even thinking about them) until you have 
 - Allow a user to set different rates for different rooms
 - Read/write CSV files for each piece of data that your system is storing
 - Create a CLI to interact with your hotel system
+
+## What we're looking for
+You can find what instructors will be looking for in the [feedback](feedback.md) markdown document. 
