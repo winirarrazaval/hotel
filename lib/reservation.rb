@@ -4,7 +4,7 @@ module Hotel
   class Reservation
     attr_reader :room_id, :start_date, :end_date, :cost
     def initialize(info_hash)
-      @room_id = info_hash[:room_number]
+      @room_id = info_hash[:room_id]
       @start_date = info_hash[:start_date]
       @end_date = info_hash[:end_date]
       @cost = cost

@@ -3,7 +3,7 @@ require_relative "spec_helper"
 describe "Reservation" do
   before do
     info = {
-      room_number: 3,
+      room_id: 3,
       start_date: Date.new(2017,07,04),
       end_date: Date.new(2017,07,06)
     }
@@ -28,7 +28,7 @@ describe "Reservation" do
 
     it "Should raise an error if the start date is equal or greater than end date" do
       infox = {
-        room_number: 3,
+        room_id: 3,
         start_date: Date.new(2017,06,05),
         end_date: Date.new(2017,05,05)
       }
