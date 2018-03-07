@@ -36,7 +36,20 @@ describe "Admin" do
     end
   end
 
-  describe "available?" do
+  describe "available_rooms" do
+
+      it "Should give an acurate number of rooms available for a specidic date" do
+        @data.available_rooms("2017-05-16", "2017-05-18").length.must_equal 20
+        3.times do
+          @data.reserve("2017-05-14", "2017-05-18")
+        end
+        @data.available_rooms("2017-05-15", "2017-05-16").length.must_equal 17
+        17.times do
+          @data.reserve("2017-05-14", "2017-05-18")
+        end
+        proc{@data.available_rooms("2017-05-16","2017-05-17")}.must_raise ArgumentError
+      end
+
     it "Should return an room ID between 1 and 20" do
       @data.reserve("2017-05-09", "2017-05-15").room_id.to_i.must_be :>=,1
       @data.reserve("2017-05-09", "2017-05-20").room_id.to_i.must_be :<=,20
@@ -71,19 +84,9 @@ describe "Admin" do
       end
     end
 
-    describe "available_rooms" do
-      it "Should give an acurate number of rooms available for a specidic date" do
-        @data.available_rooms("2017-05-16").length.must_equal 20
-        3.times do
-          @data.reserve("2017-05-14", "2017-05-18")
-        end
-        @data.available_rooms("2017-05-15").length.must_equal 17
-        17.times do
-          @data.reserve("2017-05-14", "2017-05-18")
-        end
-        @data.available_rooms("2017-05-15").length.must_equal 0
-      end
-    end
+    # describe "available_rooms" do
+
+    # end
   end
 
 

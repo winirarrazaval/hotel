@@ -33,33 +33,16 @@ module Hotel
       return reservations_date
     end
 
-    def available_rooms(date)
+
+    def available_rooms(start_date, end_date)
+      start_ = Date.parse(start_date)
+      end_ = Date.parse(end_date)
       unavailable_rooms = []
 
-      reservations_for_a_date(date).each do |reservation|
-        unavailable_rooms << reservation.room_id
-      end
-
-      available_rooms = []
-
-      @room_ids.each do |room|
-        unless unavailable_rooms.include?(room)
-          available_rooms << room
-        end
-      end
-
-      return available_rooms
-    end
-
-
-
-
-    def available?(start_date, end_date)
-      unavailable_rooms = []
 
       @reservations.each do |reservation|
         range = (reservation.start_date..(reservation.end_date - 1))
-        if range === start_date || range === end_date
+        if range === start_ || range === end_
           unavailable_room = reservation.room_id
           unavailable_rooms << unavailable_room
         end
@@ -76,14 +59,14 @@ module Hotel
       if (the_room_options == [] )
         raise ArgumentError.new("Sorry! Full rooms!")
       else
-        return the_room_options.sample
+        return the_room_options
       end
-      
+
     end
 
     def reserve(start_date, end_date)
       info = {
-        room_id: available?(Date.parse(start_date),Date.parse(end_date)),
+        room_id: available_rooms((start_date),(end_date)).sample,
         start_date: Date.parse(start_date),
         end_date: Date.parse(end_date)
       }
