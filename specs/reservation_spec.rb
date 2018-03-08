@@ -5,7 +5,8 @@ describe "Reservation" do
     info = {
       room_id: 3,
       start_date: Date.new(2017,07,04),
-      end_date: Date.new(2017,07,06)
+      end_date: Date.new(2017,07,06),
+      rate: 200
     }
     @reservation = Hotel::Reservation.new(info)
   end
@@ -30,7 +31,8 @@ describe "Reservation" do
       infox = {
         room_id: 3,
         start_date: Date.new(2017,06,05),
-        end_date: Date.new(2017,05,05)
+        end_date: Date.new(2017,05,05),
+        rate: 200
       }
       proc{ Hotel::Reservation.new(infox)}.must_raise ArgumentError
     end
