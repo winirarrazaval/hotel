@@ -150,7 +150,17 @@ describe "Admin" do
     it "Should raise an error if creating a block with more than 5 rooms" do
       proc {@data.create_block(6, "2017-05-15", "2017-05-16")}.must_raise ArgumentError
     end
+    it "should raise an error if creating a block and there are not rooms available" do
+      @data.create_block(5, "2017-05-15", "2017-05-16")
+      @data.create_block(5, "2017-05-15", "2017-05-16")
+      @data.create_block(5, "2017-05-15", "2017-05-16")
+      @data.create_block(5, "2017-05-15", "2017-05-16")
+      @data.room_blocks.length.must_equal 4
+      proc{@data.create_block(3, "2017-05-15", "2017-05-16")}.must_raise ArgumentError
+    end
   end
+
+
 
   describe "find_block_id" do
     it "Should return an instance of RoomBlock" do
