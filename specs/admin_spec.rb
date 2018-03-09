@@ -46,13 +46,11 @@ describe "Admin" do
 
     it "Should raise an error when reserving more than the rooms in a block" do
       block = @data.create_block(3, "2017-05-09", "2017-05-20" )
-      block.blocked_rooms.length.must_equal 3
       3.times do
         @data.reserve("2017-05-09", "2017-05-20", block_id: block.block_id)
       end
       block.blocked_rooms.length.must_equal 3
       block.reservations_in_this_block.length.must_equal 3
-      #no hace un error cuando se quieren reservar mas piezas para esta fecha
       proc {@data.reserve("2017-05-09", "2017-05-20", block_id: block.block_id)}.must_raise ArgumentError
     end
 
@@ -60,7 +58,23 @@ describe "Admin" do
       block = @data.create_block(3, "2017-05-09", "2017-05-20" )
       proc {@data.reserve("2017-05-09", "2017-05-22", block_id: block.block_id)}.must_raise ArgumentError
     end
+
+    it "Should let you make many reservation in a block if dates are between the range, and it should let you make as many as you can if rooms available" do
+
+      block = @data.create_block(3, "2017-05-09", "2017-05-20")
+      @data.reserve("2017-05-09", "2017-05-10", block_id: block.block_id)
+      @data.reserve("2017-05-10", "2017-05-11", block_id: block.block_id)
+      @data.reserve("2017-05-11", "2017-05-13", block_id: block.block_id)
+      @data.reserve("2017-05-13", "2017-05-16", block_id: block.block_id)
+      @data.reserve("2017-05-16", "2017-05-20", block_id: block.block_id)
+      @data.reserve("2017-05-09", "2017-05-13", block_id: block.block_id)
+      @data.reserve("2017-05-13", "2017-05-14", block_id: block.block_id)
+      @data.reserve("2017-05-15", "2017-05-16", block_id: block.block_id)
+      block.reservations_in_this_block.length.must_equal 8
+    end
   end
+
+
 
   describe "available_rooms" do
 
@@ -103,16 +117,16 @@ describe "Admin" do
     end
 
     it "Should give you the correct rooms available for a block if you have more than one block" do
-    first_block =  @data.create_block(4, "2017-05-09", "2017-05-15")
-    second_block = @data.create_block(5, "2017-05-15", "2017-05-20")
+      first_block =  @data.create_block(4, "2017-05-09", "2017-05-15")
+      second_block = @data.create_block(5, "2017-05-15", "2017-05-20")
       @data.available_rooms("2017-05-09", "2017-05-15", block_id: first_block.block_id).length.must_equal 4
       @data.available_rooms("2017-05-15", "2017-05-20", block_id: second_block.block_id).length.must_equal 5
     end
   end
 
-describe "reservations_for_a_date" do
+  describe "reservations_for_a_date" do
 
-  it "Should give you a list of reservations for a specific date " do
+    it "Should give you a list of reservations for a specific date " do
       5.times do
         @data.reserve("2017-05-09", "2017-05-15")
       end
@@ -129,7 +143,7 @@ describe "reservations_for_a_date" do
       @data.room_blocks.last.rate.must_equal 100
     end
     it "should add a new instance of RoomBlock to room_blocks instance variable" do
-    before =  @data.room_blocks.length
+      before =  @data.room_blocks.length
       @data.create_block(3, "2017-05-15", "2017-05-16")
       @data.room_blocks.length.must_equal (before + 1)
     end
