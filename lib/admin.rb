@@ -85,13 +85,6 @@ module Hotel
 
     def available_rooms(start_date, end_date, block_id: nil)
       the_room_options = (@room_ids - (@room_ids && unavailable_rooms(start_date, end_date, block_id: block_id)))
-      # the_room_options = []
-      # @room_ids.each do |room|
-      #   unless unavailable_rooms(start_date, end_date, block_id: block_id).include?(room)
-      #     the_room_options << room
-      #   end
-      # end
-
 
       unless (block_id == nil)
         my_block = find_block_id(block_id)
